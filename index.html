@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Selvamuthukumaran | AI Engineer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#0b1120;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:200%;
+
+height:200%;
+
+background:
+
+radial-gradient(circle,#00d4ff 1px,transparent 1px),
+
+radial-gradient(circle,#ff0066 1px,transparent 1px);
+
+background-size:70px 70px;
+
+opacity:.08;
+
+animation:bg 30s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes bg{
+
+100%{
+
+transform:translate(-300px,-300px);
+
+}
+
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 10%;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#00d4ff;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#00d4ff;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:120px 10%;
+
+}
+
+.hero-content{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:60px;
+
+width:100%;
+
+}
+
+.left{
+
+flex:1;
+
+}
+
+.left h3{
+
+color:#00d4ff;
+
+margin-bottom:15px;
+
+}
+
+.left h1{
+
+font-size:60px;
+
+line-height:1.2;
+
+margin-bottom:20px;
+
+}
+
+.left span{
+
+color:#00d4ff;
+
+}
+
+.left p{
+
+color:#d8d8d8;
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#00d4ff;
+
+color:#000;
+
+font-weight:600;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.right{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.profile{
+
+width:340px;
+
+height:340px;
+
+border-radius:50%;
+
+border:8px solid #00d4ff;
+
+object-fit:cover;
+
+box-shadow:0 0 40px #00d4ff;
+
+}
+
+/* About */
+
+section{
+
+padding:90px 10%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:50px;
+
+color:#00d4ff;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:20px;
+
+backdrop-filter:blur(15px);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h2{
+
+margin-bottom:20px;
+
+color:#00d4ff;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+/* Skills */
+
+.skills{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+}
+
+.skill{
+
+background:#111827;
+
+padding:20px;
+
+border-radius:15px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.skill:hover{
+
+background:#00d4ff;
+
+color:black;
+
+transform:scale(1.05);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+Selvamuthukumaran
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="left">
+
+<h3>Hello, I'm</h3>
+
+<h1>
+
+Selvamuthukumaran G
+
+</h1>
+
+<h2>
+
+<span>AI Engineer</span> & Data Analyst
+
+</h2>
+
+<p>
+
+Aspiring Artificial Intelligence & Data Science Engineer with hands-on
+experience in Machine Learning, Deep Learning, Data Analytics,
+Python, TensorFlow and SQL.
+
+</p>
+
+<a href="#contact" class="btn">
+
+Hire Me
+
+</a>
+
+</div>
+
+<div class="right">
+
+<img src="image.jpeg" class="profile">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h1 class="title">
+
+About Me
+
+</h1>
+
+<div class="about">
+
+<div class="card">
+
+<h2>
+
+Who Am I?
+
+</h2>
+
+<p>
+
+I'm currently pursuing B.Tech Artificial Intelligence and Data Science at
+Dhaanish Ahmed College of Engineering.
+I enjoy solving real-world problems using AI, Machine Learning,
+Data Analytics and Python.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+Education
+
+</h2>
+
+<p>
+
+🎓 B.Tech Artificial Intelligence & Data Science
+
+<br><br>
+
+Dhaanish Ahmed College of Engineering
+
+<br><br>
+
+2023 - 2027
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h1 class="title">
+
+Technical Skills
+
+</h1>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+
+<div class="skill">Machine Learning</div>
+
+<div class="skill">Deep Learning</div>
+
+<div class="skill">TensorFlow</div>
+
+<div class="skill">SQL</div>
+
+<div class="skill">Git</div>
+
+<div class="skill">GitHub</div>
+
+<div class="skill">Numpy</div>
+
+<div class="skill">Pandas</div>
+
+<div class="skill">Scikit-Learn</div>
+
+<div class="skill">PyTorch</div>
+
+<div class="skill">NLP</div>
+
+</div>
+
+</section>
+
+<!-- Continue with Part 2 -->
+ <!-- ================= EXPERIENCE ================= -->
+
+<section id="experience">
+
+<h1 class="title">Experience</h1>
+
+<div class="about">
+
+<div class="card">
+
+<h2>AI Intern</h2>
+
+<h3>CodSoft</h3>
+
+<p>
+
+✔ Built Machine Learning models using Python and TensorFlow.
+
+<br><br>
+
+✔ Developed NLP applications for text classification.
+
+<br><br>
+
+✔ Worked with predictive analytics and AI solutions.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Data Analytics Intern</h2>
+
+<h3>NSIC</h3>
+
+<p>
+
+✔ Analysed datasets using Python and Excel.
+
+<br><br>
+
+✔ Built KPI dashboards.
+
+<br><br>
+
+✔ Generated business insights using data visualization.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+<h1 class="title">Projects</h1>
+
+<div class="skills">
+
+<div class="card">
+
+<h2>❤️ Heart Disease Prediction</h2>
+
+<p>
+
+Machine Learning model that predicts heart disease based on medical parameters using Python and Scikit-Learn.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🎓 Student Performance Prediction</h2>
+
+<p>
+
+Developed a Streamlit web application that predicts student performance using Machine Learning algorithms.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🛒 Customer Segmentation</h2>
+
+<p>
+
+Customer segmentation system using K-Means clustering to group customers according to purchasing behaviour.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🤖 AI Resume Chatbot</h2>
+
+<p>
+
+AI-powered chatbot that answers questions from uploaded resumes using Python, Flask and OpenAI APIs.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievement">
+
+<h1 class="title">Achievements</h1>
+
+<div class="skills">
+
+<div class="skill">
+
+🏆 Improved Model Accuracy by 15%
+
+</div>
+
+<div class="skill">
+
+⚡ Reduced Data Processing Time by 30%
+
+</div>
+
+<div class="skill">
+
+📊 Increased Dashboard Efficiency by 40%
+
+</div>
+
+<div class="skill">
+
+🎖 AI & Data Analytics Internships Completed
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h1 class="title">Contact Me</h1>
+
+<div class="about">
+
+<div class="card">
+
+<h2>Contact Details</h2>
+
+<p>
+
+📧 selvamuthukumaran2409@gmail.com
+
+<br><br>
+
+📱 +91 8438036481
+
+<br><br>
+
+📍 Chennai, Tamil Nadu
+
+<br><br>
+
+💼 LinkedIn
+
+<br>
+
+linkedin.com/in/selvamuthukumaran-g-9471502b9
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Send Message</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<br><br>
+
+<input type="email" placeholder="Your Email" required>
+
+<br><br>
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<br><br>
+
+<button class="btn">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Selvamuthukumaran G | AI Engineer & Data Analyst
+
+</p>
+
+<div style="margin-top:20px;">
+
+<a href="#" style="color:#00d4ff;font-size:28px;margin:10px;">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="#" style="color:#00d4ff;font-size:28px;margin:10px;">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="#" style="color:#00d4ff;font-size:28px;margin:10px;">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</footer>
+
+<style>
+
+/* ================= CONTACT FORM ================= */
+
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+background:#111827;
+
+border:none;
+
+outline:none;
+
+color:white;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+textarea{
+
+resize:none;
+
+}
+
+button{
+
+border:none;
+
+cursor:pointer;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#050b17;
+
+margin-top:80px;
+
+}
+
+footer p{
+
+color:#ccc;
+
+font-size:16px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.hero-content{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.profile{
+
+width:250px;
+
+height:250px;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+padding:15px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</body>
+
+</html>
